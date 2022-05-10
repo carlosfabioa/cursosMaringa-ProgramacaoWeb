@@ -1,0 +1,63 @@
+body{
+    width:100%;
+    height: 100vh;
+}
+
+.banner{grid-area: banner;}
+.article{grid-area: article;}
+.aside{grid-area: aside;}
+.titulo1{grid-area: titulo1;}
+.titulo2{grid-area: titulo2;}
+.titulo3{grid-area: titulo3;}
+.conteudo1{grid-area: conteudo1;}
+.conteudo2{grid-area: conteudo2;}
+.conteudo3{grid-area: conteudo3;}
+.barra{grid-area: barra;}
+.caixa1{grid-area: caixa1;}
+.caixa2{grid-area: caixa2;}
+.footer{grid-area:footer}
+
+
+.grid-container{
+    display:grid;
+    height:100%;
+    grid-template-areas:"banner banner banner banner banner banner banner banner"
+                        "article article article article article article aside aside"
+                        "titulo1 titulo1 titulo2 titulo2 titulo3 titulo3 aside aside"
+                        "conteudo1 conteudo1 conteudo2 conteudo2 conteudo3 conteudo3 aside aside"
+                        "conteudo1 conteudo1 conteudo2 conteudo2 conteudo3 conteudo3 aside aside"
+                        "conteudo1 conteudo1 conteudo2 conteudo2 conteudo3 conteudo3 barra barra"
+                        "conteudo1 conteudo1 conteudo2 conteudo2 conteudo3 conteudo3 caixa1 caixa2"
+                        "footer footer footer footer footer footer caixa1 caixa2"
+                        ;
+    grid-template-rows: 1fr 5fr .4fr 1fr 1fr .4fr 1fr 1fr;
+    gap: .3em;
+                        
+}
+
+
+.grid-container > div{
+    background-color:blue;
+}
+
+@media (max-width: 490px){
+   .grid-container{
+    height:100%;
+        grid-template-areas:"banner"
+                            "article"
+                            "aside"
+                            "titulo1"
+                            "conteudo1"
+                            "titulo2"
+                            "conteudo2"
+                            "titulo3"
+                            "conteudo3"
+                            "barra"
+                            "caixa1"
+                            "caixa2"
+                            "footer"
+                            ;
+        grid-template-rows: 1fr 5fr 3fr .4fr 3fr .4fr 3fr .4fr  3fr 1fr 2fr 2fr .5fr;
+        gap: .3em;
+    }
+}
