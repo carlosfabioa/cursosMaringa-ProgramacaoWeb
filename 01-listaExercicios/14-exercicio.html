@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-Exercício</title>
+</head>
+<body>
+    <!--
+        João Papo-de-pescador, homem de bem, comprou um microcomputador para controlar o
+        rendimento diária do seu trabalho. Toda vez que ele traz um peso de peixes maior 
+        que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos)
+        deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça
+        um programa que leia a variável peso (peso de peixes) e calcule o excesso. 
+        Gravar na variável excesso a quantidade de quilos além do limite e na variável
+        multa o valor da multa que João deverá pagar. 
+        Imprima os dados do programa com as mensagens adequadas.
+    -->
+    
+    <script>
+        const limite = 50;
+        const valorMulta = 4;
+        let peso = Number(prompt("Peso dos peixes: "));
+
+        if(peso > limite){
+            let excesso = peso - limite;
+            let multa = valorMulta * excesso;
+            document.write(`
+                Peso dos peixes: ${peso}Kg <br>
+                Excesso de peso em quilos: ${excesso}Kg <br>
+                Valor da multa: R$ ${multa.toFixed(2)} 
+            `);
+        }
+
+       
+    </script>
+
+</body>
+</html>

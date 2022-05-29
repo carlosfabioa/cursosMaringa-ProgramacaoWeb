@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-Exercício</title>
+</head>
+<body>
+    <!--
+        Faça um programa que pergunte o quanto você ganha por hora e o número de horas
+        trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês,
+        sabendo-se que são descontados 11% para o imposto de renda, 8% para o INSS e
+        5% para o sindicato, faça um programa que nos dê:
+        -> Salário Bruto
+        -> quanto pagou de imposto de renda
+        -> quanto pagou de INSS
+        -> quanto pagou de sindicato
+        -> o salário líquido
+    -->
+    
+    <script>
+        let valorHora = Number(prompt("Valor da hora: "));
+        let horasTrabalhadas = Number(prompt("Quantidade de horas trabalhadas: "));
+
+        let salarioBruto = valorHora * horasTrabalhadas;
+        let ir = salarioBruto * .11;
+        let inss = salarioBruto * .08;
+        let sindicato = salarioBruto * 0.05;
+        let salarioLiquido = salarioBruto - (ir + inss + sindicato);
+
+        document.write(`
+                <h2>Folha de pagamento </h2>
+                Salário bruto:....................R$ ${salarioBruto.toFixed(2)} <br>
+                (-) Imposto de renda:........R$ ${ir.toFixed(2)} <br>
+                (-) INSS:..........................R$ ${inss.toFixed(2)} <br>
+                (-) Sindicato:....................R$ ${sindicato.toFixed(2)} <br>
+                <h3> SALARIO LÍQUIDO:.............R$ ${salarioLiquido.toFixed(2)}<h3>
+        `);
+
+       
+    </script>
+
+</body>
+</html>

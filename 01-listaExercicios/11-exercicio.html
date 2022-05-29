@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-Exercício</title>
+</head>
+<body>
+    <!--
+        Faça um programa que peça dois números inteiros e um numero real.
+        Calcule e mostre:
+        -> o produto do dobro do primeiro com a metade do segundo
+        -> a soma do triplo do primeiro com o terceiro
+        -> o terceiro elevado ao cubo
+    -->
+    
+    <script>
+        let num1 = Number(prompt("Entre com o primeiro número: "));
+        let num2 = Number(prompt("Entre com o segundo número: "));
+        let num3 = Number(prompt("Entre com o terceiro número: "));
+
+        //produto do dobro do primeiro com a metade do segundo
+        let produto = (num1 * 2) * (num2 / 2);
+
+        //a soma do triplo do primeiro com o terceiro
+        let soma = (num1 * 3) + num3;
+
+        //o terceiro elevado ao cubo
+        let potencia = num3 ** 3;
+
+        document.write(`
+            O produto do dobro do ${num1} com a metade do ${num2} = ${produto} <br>
+            A soma do triplo do ${num1} com o ${num3} = ${soma} <br>
+            O ${num3} elevado ao cubo= ${potencia}
+            
+            `)
+       
+    </script>
+
+</body>
+</html>

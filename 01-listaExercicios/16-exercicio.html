@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-Exercício</title>
+</head>
+<body>
+    <!--
+        Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho
+        em metros quadrados da área a ser pintada. Considere que a cobertura da tinta 
+        é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de
+        18 litros, que custam R$ 80,00.
+        Informe ao usuário a quantidade de latas de tinta a serem compradas e o
+        preço total
+    -->
+    
+    <script>
+        const rendimento = 3;
+        const volumeLata = 18;
+        const precoLitro = 80 /volumeLata;
+
+        let area = Number(prompt("Entre com a área em metros quadrados: "));
+        let quantidadeLitros = area / rendimento;
+        let quantidadeLatas = quantidadeLitros / volumeLata;
+
+        //O método Math.ceil arredonda um número para cima
+        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
+        alert(`A quantidade de latas de tintas a serem compradas é ${Math.ceil(quantidadeLatas)}`);
+
+       
+    </script>
+
+</body>
+</html>

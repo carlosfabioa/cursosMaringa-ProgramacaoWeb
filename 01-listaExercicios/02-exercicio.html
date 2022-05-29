@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Exercício</title>
+</head>
+<body>
+    <!--
+        Faça um programa que peça um número e então mostre a mensagem 
+        "O número informado foi [número]"
+    -->
+
+    <script>
+        let numero; //declaração de uma variável chamada número
+
+        /*
+        --> prompt exibe uma caixa de diálogo solicitando uma entrada para usuário
+        -->  prompt sempre retorna uma string
+            https://developer.mozilla.org/pt-BR/docs/Web/API/Window/prompt*/
+        numero = prompt("Entre com um número: "); //atribui a entrada à variável número
+
+        /*
+        -->Usamos o método alert para mostrar uma caixa de diálogo
+            https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
+        -->Foi usado a crase (template string)
+            https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+        */
+        alert(`O número informado foi ${numero}`)
+    </script>
+</body>
+</html>

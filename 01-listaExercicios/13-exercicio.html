@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-Exercício</title>
+</head>
+<body>
+    <!--
+        Tendo como entrada a altura (h) de uma pessoa, construa um algoritimo que
+        calcule seu peso ideal utiliando as seguintes fórmulas:
+        -> para homens: (72.7*h) - 58
+        -> para mulheres: (62.1*h) - 44.7
+    -->
+    
+    <script>
+        let h = Number(prompt("Altura: "));
+        let sexo = prompt("Homem digite (h) - Mulher digite (m)")
+        let pesoIdeal; //declarando uma variável sem atribuir valor
+        
+        //converte o texto em minúsculo
+        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+        sexo = sexo.toLocaleLowerCase();
+
+        if(sexo == 'h'){ //se for homem
+            pesoIdeal = (72.7*h) - 58;
+            alert(`Peso ideal do homem com altura de ${h} é de ${pesoIdeal} quilos.`);
+        }else if(sexo == 'm') { //se for mulher
+            pesoIdeal = (62.1*h) - 44.7
+            alert(`Peso ideal da mulher com altura de ${h} é de ${pesoIdeal} quilos.`);
+        } else { //se digitado outra letra
+            alert("Opção inválida");
+        }
+
+        
+
+       
+    </script>
+
+</body>
+</html>
